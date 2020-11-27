@@ -1,4 +1,4 @@
-import React from 'jsx-dom'
+import React from 'react'
 import Button from '../components/Button'
 
 interface Args {

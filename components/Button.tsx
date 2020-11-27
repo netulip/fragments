@@ -1,4 +1,4 @@
-import React from 'jsx-dom'
+import React from 'react'
 import './button.scss'
 
 interface Props {
@@ -9,19 +9,27 @@ interface Props {
   onClick?: () => {}
 }
 
-export default (p: Props) => {
+export default ({
+  backgroundColor,
+  size,
+  primary,
+  children,
+  onClick,
+}: Props) => {
+  const className = [
+    'button',
+    size || 'medium',
+    primary ? 'primary' : 'secondary',
+  ].join(' ')
+
   return (
     <button
       type="button"
-      onClick={p.onClick}
-      style={{backgroundColor: p.backgroundColor}}
-      class={[
-        'storybook-button',
-        `storybook-button--${p.size || 'medium'}`,
-        `storybook-button--${p.primary ? 'primary' : 'secondary'}`,
-      ]}
+      onClick={onClick}
+      style={{ backgroundColor }}
+      className={className}
     >
-      {p.children}
+      {children}
     </button>
   )
 }
