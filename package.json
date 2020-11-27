@@ -1,0 +1,33 @@
+{
+  "name": "fragments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "keywords": [],
+  "author": "Mohamed Meftah <http://mohamed-ted.me>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@storybook/addon-actions": "^6.1.6",
+    "@storybook/addon-essentials": "^6.1.6",
+    "@storybook/addon-links": "^6.1.6",
+    "@storybook/html": "^6.1.6",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/preset-typescript": "^3.0.0",
+    "babel-loader": "^8.2.1",
+    "css-loader": "^5.0.1",
+    "fork-ts-checker-webpack-plugin": "^6.0.3",
+    "jsx-dom": "^6.4.23",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^8.0.11",
+    "typescript": "^4.1.2"
+  },
+  "dependencies": {}
+}
