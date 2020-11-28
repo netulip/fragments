@@ -1,21 +1,17 @@
 import React from 'react'
 import './button.scss'
 
-interface Props {
-  children?: string
+export interface Props {
   size?: 'small' | 'medium' | 'large'
-  backgroundColor?: string
   primary?: boolean
-  onClick?: () => {}
+  label?: string
 }
 
-export default ({
-  backgroundColor,
-  size,
-  primary,
-  children,
-  onClick,
-}: Props) => {
+const Button: React.FC<Props> = ({
+  primary = false,
+  size = 'medium',
+  label = 'Button',
+}) => {
   const className = [
     'button',
     size || 'medium',
@@ -23,13 +19,10 @@ export default ({
   ].join(' ')
 
   return (
-    <button
-      type="button"
-      onClick={onClick}
-      style={{ backgroundColor }}
-      className={className}
-    >
-      {children}
+    <button type="button" className={className}>
+      {label}
     </button>
   )
 }
+
+export default Button

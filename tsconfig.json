@@ -8,5 +8,5 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true
   },
-  "include": ["stories/**/*", "types/**/*"]
+  "include": ["stories/**/*", "types/**/*", "components/**/*"]
 }
