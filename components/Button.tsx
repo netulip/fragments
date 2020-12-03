@@ -19,16 +19,9 @@ const Button: React.FC<ButtonProps> = ({
   ].join(' ')
 
   return (
-    <div>
-      <i>hello</i>
-      <i>hello</i>
-      <i>hello</i>
-      <i>hello</i>
-      <div>heloo</div>
-      <button type="button" className={className}>
-        {label}
-      </button>
-    </div>
+    <button type="button" className={className}>
+      {label}
+    </button>
   )
 }
 
