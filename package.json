@@ -19,7 +19,6 @@
     "@storybook/html": "^6.1.9",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/preset-typescript": "^3.0.0",
-    "angular-html-parser": "^1.7.1",
     "babel-loader": "^8.2.1",
     "css-loader": "^5.0.1",
     "fork-ts-checker-webpack-plugin": "^6.0.3",
