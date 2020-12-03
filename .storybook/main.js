@@ -6,8 +6,6 @@ module.exports = {
     '../stories/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   typescript: {
-    check: false,
-    checkOptions: {},
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
       shouldExtractLiteralValuesFromEnum: true,

@@ -1,15 +1,42 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import {
+  Description,
+  Source,
+  Meta,
+  Story,
+  Canvas,
+  Preview,
+  ArgsTable,
+} from '@storybook/addon-docs/blocks'
 import Button from '../components/Button'
+import dedent from 'ts-dedent'
 
 <Meta title="Button" component={Button} />
 
 # Button
 
-<Canvas>
-  <Story name="Primary" args={{ primary: true }}>
-    {(args) => <Button {...args} />}
-  </Story>
-  <Story name="Secondary" args={{ primary: false }}>
-    {(args) => <Button {...args} />}
-  </Story>
+<Description of={Button} />
+
+<Canvas isColumn isExpanded>
+  <Button />
 </Canvas>
+
+<Preview isColumn withSource="none">
+  <Button />
+</Preview>
+
+import { renderToStaticMarkup } from 'react-dom/server'
+import { AllHtmlEntities } from 'html-entities'
+import prettier from 'prettier'
+import HTMLParser from 'prettier/parser-html'
+const entities = new AllHtmlEntities()
+const render = (story) =>
+  prettier.format(entities.decode(renderToStaticMarkup(story())), {
+    parser: 'html',
+    plugins: [HTMLParser],
+  })
+  
+const code = render(() => <Button />)
+
+<Source language="html" code={code} dark format />
+
+<ArgsTable of={Button} />

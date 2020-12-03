@@ -1,13 +1,13 @@
 import React from 'react'
 import './button.scss'
 
-export interface Props {
+export interface ButtonProps {
   size?: 'small' | 'medium' | 'large'
   primary?: boolean
   label?: string
 }
 
-const Button: React.FC<Props> = ({
+const Button: React.FC<ButtonProps> = ({
   primary = false,
   size = 'medium',
   label = 'Button',
