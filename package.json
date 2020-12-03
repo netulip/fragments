@@ -32,5 +32,7 @@
     "ts-loader": "^8.0.11",
     "typescript": "^4.1.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@netulip/mixins": "^1.3.0"
+  }
 }

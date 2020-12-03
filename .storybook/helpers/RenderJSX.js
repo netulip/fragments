@@ -5,7 +5,7 @@ import HTMLParser from 'prettier/parser-html'
 const entities = new AllHtmlEntities()
 
 export default (story) =>
-  prettier.format(entities.decode(renderToStaticMarkup(story())), {
+  prettier.format(entities.decode(renderToStaticMarkup(story)), {
     parser: 'html',
     plugins: [HTMLParser],
   })

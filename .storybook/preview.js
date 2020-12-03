@@ -1,11 +1,12 @@
 import { addDecorator } from '@storybook/html'
-import JSXToMarkup from './decorators/JSXToMarkup'
+import RenderJSX from './helpers/RenderJSX'
+import '../styles/global.scss'
 
-addDecorator(JSXToMarkup)
+addDecorator(story => RenderJSX(story()))
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   docs: {
-    transformSource: (src, storyContext) => JSXToMarkup(storyContext.storyFn),
+    transformSource: (src, storyContext) => RenderJSX(storyContext.storyFn()),
   },
 }
